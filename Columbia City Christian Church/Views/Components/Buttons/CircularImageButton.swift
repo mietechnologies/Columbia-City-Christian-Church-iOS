@@ -31,17 +31,20 @@ struct CircularImageButton: View {
                 AsyncImage(url: assetUrl) { image in
                     image
                         .resizable()
+                        .scaledToFill()
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
                 } placeholder: {
                     Image("Test")
                         .resizable()
+                        .scaledToFill()
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
                 }
             } else if let assetName {
                 Image(assetName)
                     .resizable()
+                    .scaledToFill()
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
             }
@@ -57,7 +60,7 @@ struct CircularImageButton: View {
 }
 
 #Preview("Asset URL") {
-    CircularImageButton(url: URL(string: "https://gratisography.com/wp-content/uploads/2023/06/gratisography-rabbit-hat-free-stock-photo-800x525.jpg")) {
+    CircularImageButton(url:URL(string: "https://tinyurl.com/yck2995j")) {
         // Nothing
     }
 }
