@@ -15,8 +15,13 @@ struct ChurchLogoView: View {
             let startRadius = radius * 0.15
             
             ChurchIconShape()
-                .fill(RadialGradient(colors: [.logoSecondary, .logoTertiary, .logoPrimary], center: .top, startRadius: startRadius, endRadius: measurement))
-                .fill(LinearGradient(colors: [.clear, .clear, .black.opacity(0.3)], startPoint: .top, endPoint: .bottom))
+                .fill(RadialGradient(colors: [.logoSecondary, .logoTertiary, .logoPrimary],
+                                     center: .top,
+                                     startRadius: startRadius,
+                                     endRadius: measurement))
+                .fill(LinearGradient(colors: [.clear, .clear, .black.opacity(0.3)],
+                                     startPoint: .top,
+                                     endPoint: .bottom))
         }
         .aspectRatio(contentMode: .fit)
     }
