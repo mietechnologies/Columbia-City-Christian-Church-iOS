@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Columbia_City_Christian_ChurchApp: App {
+struct ColumbiaCityChristianChurchApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
