@@ -1,0 +1,36 @@
+name: Lint
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0 # Adjust the Ruby version as needed
+
+    - name: Install SwiftLint
+      run: brew install swiftlint
+
+    - name: Install Fastlane
+      run: gem install fastlane
+
+    - name: Run SwiftLint
+      run: |
+        fastlane lint
+      env:
+        LC_ALL: en_US.UTF-8
+        LANG: en_US.UTF-8
+
+    - name: Upload SwiftLint Report
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: swiftlint-report
+        path: swiftlint.report.json

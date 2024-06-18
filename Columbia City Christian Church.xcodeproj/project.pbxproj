@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		745A98DC2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */; };
+		745A98DC2C21210600801522 /* ColumbiaCityChristianChurchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98DB2C21210600801522 /* ColumbiaCityChristianChurchApp.swift */; };
 		745A98DE2C21210600801522 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98DD2C21210600801522 /* ContentView.swift */; };
 		745A98E02C21210600801522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745A98DF2C21210600801522 /* Assets.xcassets */; };
 		745A98E32C21210600801522 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745A98E22C21210600801522 /* Preview Assets.xcassets */; };
-		745A98ED2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98EC2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift */; };
-		745A98F72C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F62C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift */; };
-		745A98F92C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */; };
+		745A98ED2C21210700801522 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98EC2C21210700801522 /* AppTests.swift */; };
+		745A98F72C21210700801522 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F62C21210700801522 /* AppUITests.swift */; };
+		745A98F92C21210700801522 /* AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F82C21210700801522 /* AppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +35,16 @@
 
 /* Begin PBXFileReference section */
 		745A98D82C21210600801522 /* Columbia City Christian Church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Columbia City Christian Church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchApp.swift; sourceTree = "<group>"; };
+		745A98DB2C21210600801522 /* ColumbiaCityChristianChurchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumbiaCityChristianChurchApp.swift; sourceTree = "<group>"; };
 		745A98DD2C21210600801522 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		745A98DF2C21210600801522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		745A98E22C21210600801522 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		745A98E82C21210700801522 /* Columbia City Christian ChurchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Columbia City Christian ChurchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		745A98EC2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchTests.swift; sourceTree = "<group>"; };
+		745A98EC2C21210700801522 /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		745A98F22C21210700801522 /* Columbia City Christian ChurchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Columbia City Christian ChurchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		745A98F62C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchUITests.swift; sourceTree = "<group>"; };
-		745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		745A98F62C21210700801522 /* AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITests.swift; sourceTree = "<group>"; };
+		745A98F82C21210700801522 /* AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74D8A4DE2C2138FB00EB6859 /* Columbia-City-Christian-Church-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Columbia-City-Christian-Church-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +95,14 @@
 		745A98DA2C21210600801522 /* Columbia City Christian Church */ = {
 			isa = PBXGroup;
 			children = (
-				745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */,
+				74D8A4DE2C2138FB00EB6859 /* Columbia-City-Christian-Church-Info.plist */,
+				745A99092C21234C00801522 /* Protocols */,
+				745A99082C21234500801522 /* Extensions */,
+				745A990A2C21235B00801522 /* Services */,
+				745A99062C21233A00801522 /* Models */,
+				745A99052C21233300801522 /* Views */,
+				745A99072C21233F00801522 /* ViewModels */,
+				745A98DB2C21210600801522 /* ColumbiaCityChristianChurchApp.swift */,
 				745A98DD2C21210600801522 /* ContentView.swift */,
 				745A98DF2C21210600801522 /* Assets.xcassets */,
 				745A98E12C21210600801522 /* Preview Content */,
@@ -113,7 +121,7 @@
 		745A98EB2C21210700801522 /* Columbia City Christian ChurchTests */ = {
 			isa = PBXGroup;
 			children = (
-				745A98EC2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift */,
+				745A98EC2C21210700801522 /* AppTests.swift */,
 			);
 			path = "Columbia City Christian ChurchTests";
 			sourceTree = "<group>";
@@ -121,10 +129,52 @@
 		745A98F52C21210700801522 /* Columbia City Christian ChurchUITests */ = {
 			isa = PBXGroup;
 			children = (
-				745A98F62C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift */,
-				745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */,
+				745A98F62C21210700801522 /* AppUITests.swift */,
+				745A98F82C21210700801522 /* AppUITestsLaunchTests.swift */,
 			);
 			path = "Columbia City Christian ChurchUITests";
+			sourceTree = "<group>";
+		};
+		745A99052C21233300801522 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		745A99062C21233A00801522 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		745A99072C21233F00801522 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		745A99082C21234500801522 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		745A99092C21234C00801522 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		745A990A2C21235B00801522 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +187,7 @@
 				745A98D42C21210600801522 /* Sources */,
 				745A98D52C21210600801522 /* Frameworks */,
 				745A98D62C21210600801522 /* Resources */,
+				745A990B2C212B4A00801522 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -252,13 +303,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		745A990B2C212B4A00801522 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n    swiftlint --fix\nelse\n    echo \"warning: SwiftLint not installed, run 'brew install swiftlint'\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		745A98D42C21210600801522 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
-				745A98DC2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift in Sources */,
+				745A98DC2C21210600801522 /* ColumbiaCityChristianChurchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745A98ED2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift in Sources */,
+				745A98ED2C21210700801522 /* AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745A98F92C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift in Sources */,
-				745A98F72C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift in Sources */,
+				745A98F92C21210700801522 /* AppUITestsLaunchTests.swift in Sources */,
+				745A98F72C21210700801522 /* AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +405,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -395,7 +468,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -425,6 +498,7 @@
 				DEVELOPMENT_TEAM = 6U666T5AU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Columbia-City-Christian-Church-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CCCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +535,7 @@
 				DEVELOPMENT_TEAM = 6U666T5AU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Columbia-City-Christian-Church-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CCCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
