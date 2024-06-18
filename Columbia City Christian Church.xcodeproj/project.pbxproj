@@ -18,6 +18,8 @@
 		74E0FD232C21ED43001F14AE /* ChurchLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD222C21ED43001F14AE /* ChurchLogoView.swift */; };
 		74E0FD252C21ED8E001F14AE /* ChurchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD242C21ED8E001F14AE /* ChurchButton.swift */; };
 		74E0FD272C21EE21001F14AE /* CircularImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD262C21EE21001F14AE /* CircularImageButton.swift */; };
+		74E0FD292C21F306001F14AE /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD282C21F306001F14AE /* Dashboard.swift */; };
+		74E0FD2B2C21F366001F14AE /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD2A2C21F366001F14AE /* DashboardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		74E0FD222C21ED43001F14AE /* ChurchLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchLogoView.swift; sourceTree = "<group>"; };
 		74E0FD242C21ED8E001F14AE /* ChurchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchButton.swift; sourceTree = "<group>"; };
 		74E0FD262C21EE21001F14AE /* CircularImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageButton.swift; sourceTree = "<group>"; };
+		74E0FD282C21F306001F14AE /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		74E0FD2A2C21F366001F14AE /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		74E0FD192C21EB3B001F14AE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				74E0FD2A2C21F366001F14AE /* DashboardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				74E0FD1D2C21EB9C001F14AE /* Components */,
+				74E0FD282C21F306001F14AE /* Dashboard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,7 +345,9 @@
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
 				74E0FD252C21ED8E001F14AE /* ChurchButton.swift in Sources */,
 				74E0FD212C21ED17001F14AE /* ChurchLogoShape.swift in Sources */,
+				74E0FD292C21F306001F14AE /* Dashboard.swift in Sources */,
 				745A98DC2C21210600801522 /* ColumbiaCityChristianChurchApp.swift in Sources */,
+				74E0FD2B2C21F366001F14AE /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
