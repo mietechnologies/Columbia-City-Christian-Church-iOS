@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74534E212C21405E00028D7A /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74534E202C21405E00028D7A /* Dashboard.swift */; };
+		74534E232C21410F00028D7A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74534E222C21410F00028D7A /* DashboardViewModel.swift */; };
+		74534E262C21427F00028D7A /* ChurchLogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74534E252C21427F00028D7A /* ChurchLogoShape.swift */; };
+		74534E292C2142F100028D7A /* ChurchLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74534E282C2142F100028D7A /* ChurchLogoView.swift */; };
 		745A98DC2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */; };
 		745A98DE2C21210600801522 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98DD2C21210600801522 /* ContentView.swift */; };
 		745A98E02C21210600801522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 745A98DF2C21210600801522 /* Assets.xcassets */; };
@@ -14,6 +18,8 @@
 		745A98ED2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98EC2C21210700801522 /* Columbia_City_Christian_ChurchTests.swift */; };
 		745A98F72C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F62C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift */; };
 		745A98F92C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */; };
+		74C5C16E2C21471A009016B3 /* ChurchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5C16D2C21471A009016B3 /* ChurchButton.swift */; };
+		74C5C1702C2147B9009016B3 /* CircularImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5C16F2C2147B9009016B3 /* CircularImageButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74534E202C21405E00028D7A /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		74534E222C21410F00028D7A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		74534E252C21427F00028D7A /* ChurchLogoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchLogoShape.swift; sourceTree = "<group>"; };
+		74534E282C2142F100028D7A /* ChurchLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchLogoView.swift; sourceTree = "<group>"; };
 		745A98D82C21210600801522 /* Columbia City Christian Church.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Columbia City Christian Church.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchApp.swift; sourceTree = "<group>"; };
 		745A98DD2C21210600801522 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,8 @@
 		745A98F22C21210700801522 /* Columbia City Christian ChurchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Columbia City Christian ChurchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		745A98F62C21210700801522 /* Columbia_City_Christian_ChurchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchUITests.swift; sourceTree = "<group>"; };
 		745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Columbia_City_Christian_ChurchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74C5C16D2C21471A009016B3 /* ChurchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchButton.swift; sourceTree = "<group>"; };
+		74C5C16F2C2147B9009016B3 /* CircularImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74534E1A2C213FFF00028D7A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				74534E222C21410F00028D7A /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		74534E1B2C21401100028D7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74534E272C2142B800028D7A /* Components */,
+				74534E202C21405E00028D7A /* Dashboard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		74534E1C2C21401700028D7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74534E1D2C21401D00028D7A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		74534E1E2C21402E00028D7A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		74534E1F2C21403700028D7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74534E242C21427100028D7A /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				74534E252C21427F00028D7A /* ChurchLogoShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		74534E272C2142B800028D7A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74C5C16C2C21470E009016B3 /* Buttons */,
+				74534E242C21427100028D7A /* Shapes */,
+				74534E282C2142F100028D7A /* ChurchLogoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		745A98CF2C21210600801522 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +169,12 @@
 		745A98DA2C21210600801522 /* Columbia City Christian Church */ = {
 			isa = PBXGroup;
 			children = (
+				74534E1F2C21403700028D7A /* Extensions */,
+				74534E1E2C21402E00028D7A /* Protocols */,
+				74534E1D2C21401D00028D7A /* Services */,
+				74534E1C2C21401700028D7A /* Models */,
+				74534E1B2C21401100028D7A /* Views */,
+				74534E1A2C213FFF00028D7A /* ViewModels */,
 				745A98DB2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift */,
 				745A98DD2C21210600801522 /* ContentView.swift */,
 				745A98DF2C21210600801522 /* Assets.xcassets */,
@@ -125,6 +206,15 @@
 				745A98F82C21210700801522 /* Columbia_City_Christian_ChurchUITestsLaunchTests.swift */,
 			);
 			path = "Columbia City Christian ChurchUITests";
+			sourceTree = "<group>";
+		};
+		74C5C16C2C21470E009016B3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				74C5C16D2C21471A009016B3 /* ChurchButton.swift */,
+				74C5C16F2C2147B9009016B3 /* CircularImageButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C5C1702C2147B9009016B3 /* CircularImageButton.swift in Sources */,
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
+				74534E212C21405E00028D7A /* Dashboard.swift in Sources */,
 				745A98DC2C21210600801522 /* Columbia_City_Christian_ChurchApp.swift in Sources */,
+				74534E232C21410F00028D7A /* DashboardViewModel.swift in Sources */,
+				74C5C16E2C21471A009016B3 /* ChurchButton.swift in Sources */,
+				74534E292C2142F100028D7A /* ChurchLogoView.swift in Sources */,
+				74534E262C21427F00028D7A /* ChurchLogoShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
