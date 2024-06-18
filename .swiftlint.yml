@@ -28,6 +28,7 @@ disabled_rules:
   - private_over_fileprivate
   - redundant_optional_initialization
   - syntactic_sugar
+  - static_over_final_class
 
 # Customize rules
 opt_in_rules:

@@ -8,7 +8,7 @@
 import XCTest
 @testable import Columbia_City_Christian_Church
 
-final class Columbia_City_Christian_ChurchTests: XCTestCase {
+final class AppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
