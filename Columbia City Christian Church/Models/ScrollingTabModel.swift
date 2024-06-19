@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ScrollingTabModel: Identifiable {
     private(set) var id: Tab
-    var size: CGSize = .zero
-    var minX: CGFloat = .zero
     
     // TODO: This will need to be updated once a final version has been made
     // The current selection is purely for testing
+    /**
+     Returns the associated View that should be displayed in conjunction with this ScrollingTabModel.
+     
+     - Returns: A View that represents this ScrollingTabModel's screen.
+     */
     func screen() -> some View {
         switch id {
         case .dashboard:
