@@ -58,7 +58,9 @@ struct Dashboard: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
                         ChurchButton {
-                            // Nothing
+                            withAnimation(.snappy) {
+                                activeTab = .dashboard
+                            }
                         }
                     }
                     
