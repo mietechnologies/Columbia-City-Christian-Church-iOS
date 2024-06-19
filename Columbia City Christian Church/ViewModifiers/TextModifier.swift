@@ -17,9 +17,8 @@ struct TextModifier: ViewModifier {
         content
             .font(style.font())
             .lineSpacing(lineSpacing)
-            .foregroundColor(fontColor)
+            .foregroundStyle(.textPrimary)
             .tracking(style != .body ? 0.5 : 0)
-            .padding(.top, 12)
             .contentShape(Rectangle())
     }
 }
@@ -34,7 +33,7 @@ extension TextModifier {
             switch self {
             case .body: return .body
             case .mediumHeader: return .title3
-            case .header: return .title
+            case .header: return .title2
             }
         }
     }
