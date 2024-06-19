@@ -12,30 +12,6 @@ struct ScrollingTabModel: Identifiable {
     
     // TODO: This will need to be updated once a final version has been made
     // The current selection is purely for testing
-    /**
-     Returns the associated View that should be displayed in conjunction with this ScrollingTabModel.
-     
-     - Returns: A View that represents this ScrollingTabModel's screen.
-     */
-    func screen() -> some View {
-        switch id {
-        case .dashboard:
-            return Text(id.rawValue)
-        case .checkIn:
-            return Text(id.rawValue)
-        case .tithe:
-            return Text(id.rawValue)
-        case .sermonNotes:
-            return Text(id.rawValue)
-        case .prayerChain:
-            return Text(id.rawValue)
-        case .events:
-            return Text(id.rawValue)
-        }
-    }
-    
-    // TODO: This will need to be updated once a final version has been made
-    // The current selection is purely for testing
     enum Tab: String, CaseIterable {
         case dashboard = "Dashboard"
         case checkIn = "Check In"

@@ -22,6 +22,7 @@ struct ScrollingTabItem: View {
             } label: {
                 Text(tab.id.rawValue)
                     .themeStyle(.body)
+                    .padding(.top, 12)
             }
             .buttonStyle(.plain)
             
