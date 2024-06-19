@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Text {
+<<<<<<< HEAD
     /**
      A custom modifier for Text views that applies the `TextModifier` ViewModifier. Which allows for quick and uniform formattering.
      
@@ -19,5 +20,12 @@ extension Text {
                     lineSpacing: CGFloat = 1,
                     fontColor: Color = .textPrimary) -> some View {
         self.modifier(TextModifier(style: style, lineSpacing: lineSpacing, fontColor: fontColor))
+=======
+    func themeStyle(_ style: TextModifier.FontStyle, 
+                    lineSpacing: CGFloat = 1,
+                    fontColor: Color = .textPrimary,
+                    fontSize: CGFloat? = nil) -> some View {
+        self.modifier(TextModifier(style: style, lineSpacing: lineSpacing, fontColor: fontColor, fontSize: fontSize))
+>>>>>>> 802dde8 (Added TextModifier)
     }
 }

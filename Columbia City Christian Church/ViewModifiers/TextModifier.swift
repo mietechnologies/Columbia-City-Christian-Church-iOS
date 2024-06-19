@@ -12,10 +12,11 @@ struct TextModifier: ViewModifier {
     let style: FontStyle
     let lineSpacing: CGFloat
     let fontColor: Color
+    let fontSize: CGFloat?
     
     func body(content: Content) -> some View {
         content
-            .font(style.font())
+            .font(style.font(fontSize))
             .lineSpacing(lineSpacing)
             .foregroundColor(fontColor)
             .tracking(style != .body ? 0.5 : 0)
@@ -30,7 +31,7 @@ extension TextModifier {
         case mediumHeader
         case header
         
-        func font() -> Font {
+        func font(_ size: CGFloat?) -> Font {
             switch self {
             case .body: return .body
             case .mediumHeader: return .title3
