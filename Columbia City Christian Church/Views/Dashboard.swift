@@ -24,7 +24,7 @@ struct Dashboard: View {
         NavigationStack {
             VStack(spacing: 0) {
                 
-                ScrollingTabView(tabOptions: $tabOptions, selectedTab: $activeTab)
+                ScrollingTabView(tabOptions: $tabOptions, currentTab: $activeTab)
                     .padding(.horizontal, 5)
                     .onChange(of: activeTab) { _, newValue in
                         mainViewScrollState = newValue
@@ -73,6 +73,12 @@ struct Dashboard: View {
             }
             .background(.navigationBarBackground)
         }
+    }
+}
+
+struct TestView: View {
+    var body: some View {
+        Text("Hello World!")
     }
 }
 
