@@ -29,6 +29,7 @@ disabled_rules:
   - redundant_optional_initialization
   - syntactic_sugar
   - static_over_final_class
+  - todo
 
 # Customize rules
 opt_in_rules:
@@ -93,12 +94,6 @@ reporter: "json" # available: "xcode", "json", "csv", "checkstyle", "junit", "ht
 
 # Custom severity levels
 custom_rules:
-  TODO:
-    name: "TODOs and FIXMEs"
-    regex: 'TODO|FIXME'
-    message: "TODOs and FIXMEs should be resolved before committing."
-    severity: warning
-
   ForceUnwrapping:
     name: "Force Unwrapping"
     regex: '\!\s'
