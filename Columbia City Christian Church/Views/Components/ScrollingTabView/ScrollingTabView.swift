@@ -10,7 +10,7 @@ import SwiftUI
 struct ScrollingTabView: View {
     
     @Binding var tabOptions: [ScrollingTabModel]
-    @Binding var selectedTab: ScrollingTabModel.Tab
+    @Binding var currentTab: ScrollingTabModel.Tab
     @Namespace var namespace
     
     var body: some View {
@@ -21,7 +21,7 @@ struct ScrollingTabView: View {
             ScrollView(.horizontal) {
                 HStack(spacing: 20) {
                     ForEach(tabOptions) { tab in
-                        ScrollingTabItem(selectedTab: $selectedTab, tab: tab, namespace: namespace)
+                        ScrollingTabItem(currentTab: $currentTab, tab: tab, namespace: namespace)
                     }
                 }
             }
@@ -31,7 +31,7 @@ struct ScrollingTabView: View {
             .safeAreaPadding(.horizontal, 10)
         }
         .scrollPosition(id: .init(get: {
-            return selectedTab
+            return currentTab
         }, set: { _ in
         }), anchor: .center)
     }

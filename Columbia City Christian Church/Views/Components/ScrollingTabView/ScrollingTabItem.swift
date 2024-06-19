@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScrollingTabItem: View {
     
-    @Binding var selectedTab: ScrollingTabModel.Tab
+    @Binding var currentTab: ScrollingTabModel.Tab
     var tab: ScrollingTabModel
     let namespace: Namespace.ID
     
@@ -17,7 +17,7 @@ struct ScrollingTabItem: View {
         VStack(spacing: 3) {
             Button {
                 withAnimation(.snappy) {
-                    self.selectedTab = tab.id
+                    self.currentTab = tab.id
                 }
             } label: {
                 Text(tab.id.rawValue)
@@ -25,7 +25,7 @@ struct ScrollingTabItem: View {
             }
             .buttonStyle(.plain)
             
-            if selectedTab == tab.id {
+            if currentTab == tab.id {
                 Color.textPrimary
                     .frame(height: 2)
                     .matchedGeometryEffect(id: "underline", in: namespace, properties: .frame)
@@ -35,6 +35,6 @@ struct ScrollingTabItem: View {
             }
         }
         .padding(.bottom, 12)
-        .animation(.spring(), value: selectedTab)
+        .animation(.spring(), value: currentTab)
     }
 }
