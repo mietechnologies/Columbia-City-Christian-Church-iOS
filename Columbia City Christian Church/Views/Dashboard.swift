@@ -25,7 +25,6 @@ struct Dashboard: View {
             VStack(spacing: 0) {
                 
                 ScrollingTabView(tabOptions: $tabOptions, selectedTab: $activeTab)
-                    .padding(.horizontal, 5)
                     .onChange(of: activeTab) { _, newValue in
                         mainViewScrollState = newValue
                     }
@@ -36,7 +35,7 @@ struct Dashboard: View {
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 0) {
                             ForEach(tabOptions) { tab in
-                                tab.screen()
+                                screen(for: tab.id)
                                     .frame(width: size.width, height: size.height)
                                     .contentShape(Rectangle())
                             }
@@ -46,6 +45,7 @@ struct Dashboard: View {
                     .scrollPosition(id: $mainViewScrollState)
                     .scrollIndicators(.hidden)
                     .scrollTargetBehavior(.paging)
+                    .toolbarBackground(.navigationBarBackground, for: .navigationBar)
                     .background(.white)
                     .onChange(of: mainViewScrollState) { _, newValue in
                         if let newValue {
@@ -62,18 +62,30 @@ struct Dashboard: View {
                                 activeTab = .dashboard
                             }
                         }
+                        .padding(.bottom, 15)
                     }
                     
                     ToolbarItem(placement: .topBarTrailing) {
                         CircularImageButton(name: "Test") {
                             // Nothing
                         }
+                        .padding(.bottom, 15)
                     }
                 }
             }
-            .background(.navigationBarBackground)
         }
     }
+    
+    @ViewBuilder
+    private func screen(for tab: ScrollingTabModel.Tab) -> some View {
+        switch tab {
+        case .dashboard:
+            AboutChurchScreen()
+        default:
+            Text(tab.rawValue)
+        }
+    }
+    
 }
 
 struct TestView: View {
