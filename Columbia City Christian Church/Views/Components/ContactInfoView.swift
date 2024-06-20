@@ -27,14 +27,11 @@ struct ContactInfoView: View {
             Text(streetSecondary)
                 .themeStyle(.body)
             
-            
-            
             Button {
                 // TODO: Open phone app with phone number prefilled
             } label: {
                 Text(phoneNumber)
-                    .font(.body)
-                    .foregroundStyle(.blue)
+                    .themeStyle(.body, fontColor: .blue)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
