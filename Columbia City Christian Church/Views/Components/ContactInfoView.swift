@@ -14,6 +14,22 @@ struct ContactInfoView: View {
     let streetSecondary: String
     let phoneNumber: String
     
+    init(name: String, streetPrimary: String, streetSecondary: String, phoneNumber: String) {
+        self.name = name
+        self.streetPrimary = streetPrimary
+        self.streetSecondary = streetSecondary
+        self.phoneNumber = phoneNumber
+    }
+    
+    init(_ contactInfo: ContactInfo) {
+        self.init(
+            name: contactInfo.name,
+            streetPrimary: contactInfo.streetPrimary,
+            streetSecondary: contactInfo.streetSecondary,
+            phoneNumber: contactInfo.phoneNumber
+        )
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(name)

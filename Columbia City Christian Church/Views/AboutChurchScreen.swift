@@ -40,8 +40,8 @@ struct AboutChurchScreen: View {
             }
             .padding(.vertical, 10)
             
-//            Divider()
-//                .background(.white)
+            Divider()
+                .background(.white)
             
             ContactInfoView(
                 name: "Columbia City Christian Church",
