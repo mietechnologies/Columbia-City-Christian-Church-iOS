@@ -76,6 +76,11 @@ struct Dashboard: View {
         }
     }
     
+    /**
+     A method for deciding what view to display in the Dashboard container.
+     
+     - Parameter for: Accepts a `ScrollingTabModel.Tab` to determine what main view to return for the dashboard.
+     */
     @ViewBuilder
     private func screen(for tab: ScrollingTabModel.Tab) -> some View {
         switch tab {

@@ -67,6 +67,11 @@ extension TextModifier {
         case mediumHeader
         case header
         
+        /**
+         Generates a `Font` given the value of `self`
+         
+         - Parameter size: A `CGFloat` that determines the size of a given FontSize
+         */
         func font(size: CGFloat) -> Font {
             switch self {
             case .body: return .system(size: size, weight: .regular, design: .default)
