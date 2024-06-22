@@ -14,22 +14,17 @@ struct ScrollingTabView: View {
     @Namespace var namespace
     
     var body: some View {
-        VStack(spacing: 0) {
-            Divider()
-                .padding(.top, 10)
-            
-            ScrollView(.horizontal) {
-                HStack(spacing: 20) {
-                    ForEach(tabOptions) { tab in
-                        ScrollingTabItem(selectedTab: $selectedTab, tab: tab, namespace: namespace)
-                    }
+        ScrollView(.horizontal) {
+            HStack(spacing: 0) {
+                ForEach(tabOptions) { tab in
+                    ScrollingTabItem(selectedTab: $selectedTab, tab: tab, namespace: namespace)
+                        .padding(.horizontal, 10)
                 }
             }
-            .scrollIndicators(.hidden)
-            .scrollTargetLayout()
-            .background(.navigationBarBackground)
-            .safeAreaPadding(.horizontal, 10)
         }
+        .scrollIndicators(.hidden)
+        .scrollTargetLayout()
+        .background(.navigationBarBackground)
         .scrollPosition(id: .init(get: {
             return selectedTab
         }, set: { _ in
