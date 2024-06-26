@@ -44,7 +44,7 @@ extension RoundedRectangleButtonStyle {
         var foregroundColor: Color {
             switch self {
             case .neutral:      Color.white
-            case .destructive:  Color.red
+            case .destructive:  .destructiveButtonForeground
             case .confirmation: Color.white
             }
         }
