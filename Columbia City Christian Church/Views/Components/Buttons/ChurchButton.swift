@@ -15,8 +15,32 @@ struct ChurchButton: View {
         Button {
             action()
         } label: {
-            ChurchLogoView()
-                .frame(width: 40, height: 40)
+            ZStack {
+                Image("Church Icon")
+                    .resizable()
+                    .scaledToFit()
+                    .tint(
+                        RadialGradient(
+                            colors: [.logoSecondary, .logoTertiary, .logoPrimary],
+                            center: .top,
+                            startRadius: 20 * 0.15,
+                            endRadius: 40
+                        )
+                    )
+                    .frame(width: 40, height: 40)
+                
+                Image("Church Icon")
+                    .resizable()
+                    .scaledToFit()
+                    .tint(
+                        LinearGradient(
+                            colors: [.clear, .clear, .black.opacity(0.3)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+                    .frame(width: 40, height: 40)
+            }
         }
 
     }
