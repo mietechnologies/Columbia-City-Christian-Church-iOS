@@ -16,11 +16,7 @@ struct TextModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-<<<<<<< HEAD
             .font(style.font(size: fontSize))
-=======
-            .font(style.font())
->>>>>>> 9be296d (Removed fontSize from TextModifier)
             .lineSpacing(lineSpacing)
             .foregroundStyle(fontColor)
             .tracking(style != .body ? 0.5 : 0)
