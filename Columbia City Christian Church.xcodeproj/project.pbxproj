@@ -23,8 +23,6 @@
 		7490A05E2C25159E00968BFE /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490A05D2C25159E00968BFE /* ContactInfo.swift */; };
 		74B30CBA2C23A33E00BFCC63 /* AboutChurchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B30CB92C23A33E00BFCC63 /* AboutChurchScreen.swift */; };
 		74B30CBC2C23B24E00BFCC63 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B30CBB2C23B24E00BFCC63 /* LocationMapView.swift */; };
-		74E0FD212C21ED17001F14AE /* ChurchLogoShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD202C21ED17001F14AE /* ChurchLogoShape.swift */; };
-		74E0FD232C21ED43001F14AE /* ChurchLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD222C21ED43001F14AE /* ChurchLogoView.swift */; };
 		74E0FD252C21ED8E001F14AE /* ChurchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD242C21ED8E001F14AE /* ChurchButton.swift */; };
 		74E0FD272C21EE21001F14AE /* CircularImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD262C21EE21001F14AE /* CircularImageButton.swift */; };
 		74E0FD292C21F306001F14AE /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0FD282C21F306001F14AE /* Dashboard.swift */; };
@@ -69,8 +67,6 @@
 		74B30CB92C23A33E00BFCC63 /* AboutChurchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutChurchScreen.swift; sourceTree = "<group>"; };
 		74B30CBB2C23B24E00BFCC63 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		74D8A4DE2C2138FB00EB6859 /* Columbia-City-Christian-Church-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Columbia-City-Christian-Church-Info.plist"; sourceTree = SOURCE_ROOT; };
-		74E0FD202C21ED17001F14AE /* ChurchLogoShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchLogoShape.swift; sourceTree = "<group>"; };
-		74E0FD222C21ED43001F14AE /* ChurchLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchLogoView.swift; sourceTree = "<group>"; };
 		74E0FD242C21ED8E001F14AE /* ChurchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChurchButton.swift; sourceTree = "<group>"; };
 		74E0FD262C21EE21001F14AE /* CircularImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageButton.swift; sourceTree = "<group>"; };
 		74E0FD282C21F306001F14AE /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
@@ -220,9 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				7428C59A2C23179B0070D7CE /* ScrollingTabView */,
-				74E0FD1F2C21EC89001F14AE /* Shapes */,
 				74E0FD1E2C21EBA4001F14AE /* Buttons */,
-				74E0FD222C21ED43001F14AE /* ChurchLogoView.swift */,
 				7428C59D2C237F3D0070D7CE /* ContactInfoView.swift */,
 				74B30CBB2C23B24E00BFCC63 /* LocationMapView.swift */,
 			);
@@ -236,14 +230,6 @@
 				74E0FD262C21EE21001F14AE /* CircularImageButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		74E0FD1F2C21EC89001F14AE /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				74E0FD202C21ED17001F14AE /* ChurchLogoShape.swift */,
-			);
-			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,13 +389,11 @@
 				74E0FD272C21EE21001F14AE /* CircularImageButton.swift in Sources */,
 				74B30CBC2C23B24E00BFCC63 /* LocationMapView.swift in Sources */,
 				7428C58B2C22835B0070D7CE /* TextModifier.swift in Sources */,
-				74E0FD232C21ED43001F14AE /* ChurchLogoView.swift in Sources */,
 				7428C5992C2317350070D7CE /* ScrollingTabView.swift in Sources */,
 				7428C5942C22884C0070D7CE /* TextExtensions.swift in Sources */,
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
 				7428C59E2C237F3D0070D7CE /* ContactInfoView.swift in Sources */,
 				74E0FD252C21ED8E001F14AE /* ChurchButton.swift in Sources */,
-				74E0FD212C21ED17001F14AE /* ChurchLogoShape.swift in Sources */,
 				74B30CBA2C23A33E00BFCC63 /* AboutChurchScreen.swift in Sources */,
 				7490A05E2C25159E00968BFE /* ContactInfo.swift in Sources */,
 				7428C59C2C2317CD0070D7CE /* ScrollingTabItem.swift in Sources */,
