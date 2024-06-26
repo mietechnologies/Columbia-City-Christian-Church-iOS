@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileScreen: View {
     var body: some View {
@@ -17,16 +18,19 @@ struct ProfileScreen: View {
             
             // TODO: Update all these text objects with the updates from AboutChurchScreen
             Text("Brett Chapin")
-                .themeStyle(.header)
+                .themeStyle(.mediumHeader)
                 .foregroundStyle(.textPrimary)
             
             Text("Joined: June 20, 2024 | Birthday: October 32, 1989")
                 .foregroundStyle(.textPrimary)
                 .font(.caption)
                 .italic()
+                .padding(.bottom, 10)
+                .padding(.top, 5)
             
             Text("Phone #: (260) 555-5555")
                 .themeStyle(.body)
+                .padding(.bottom, 10)
             
             Text("Address:")
                 .themeStyle(.body)
@@ -36,6 +40,7 @@ struct ProfileScreen: View {
             
             Text("RandomVille, UT 12345")
                 .themeStyle(.body)
+                .padding(.bottom, 10)
             
             Button {
                 
@@ -67,6 +72,13 @@ struct ProfileScreen: View {
             .padding(.horizontal, 25)
             .padding(.vertical, 10)
 
+        }
+        .navigationTitle("User Profile")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Text("Edit")
+                    .foregroundStyle(.blue)
+            }
         }
     }
 }
