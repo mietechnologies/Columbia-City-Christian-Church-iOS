@@ -62,14 +62,16 @@ struct Dashboard: View {
                                 activeTab = .dashboard
                             }
                         }
-                        .padding(.bottom, 15)
+                        .padding(.bottom, 10)
                     }
                     
                     ToolbarItem(placement: .topBarTrailing) {
-                        CircularImageButton(name: "Test") {
-                            // Nothing
+                        NavigationLink {
+                            ProfileScreen()
+                        } label: {
+                            CircleImageView(url: nil)
                         }
-                        .padding(.bottom, 15)
+                        .padding(.bottom, 10)
                     }
                 }
             }
@@ -91,18 +93,6 @@ struct Dashboard: View {
         }
     }
     
-}
-
-struct TestView: View {
-    var body: some View {
-        Text("Hello World!")
-    }
-}
-
-struct TestView: View {
-    var body: some View {
-        Text("Hello World!")
-    }
 }
 
 #Preview {
