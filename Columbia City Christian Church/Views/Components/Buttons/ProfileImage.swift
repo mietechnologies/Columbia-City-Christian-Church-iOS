@@ -33,7 +33,6 @@ struct ProfileImage: View {
                         .foregroundStyle(.gray)
                 }
                 
-                // TODO: Update with AboutChurchView
                 PhotosPicker("Edit", selection: $avatarItem, matching: .images)
                     .font(.body)
                     .tracking(2)
