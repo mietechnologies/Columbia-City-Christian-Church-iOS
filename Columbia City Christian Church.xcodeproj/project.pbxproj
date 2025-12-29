@@ -16,6 +16,7 @@
 		745A98F92C21210700801522 /* AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745A98F82C21210700801522 /* AppUITestsLaunchTests.swift */; };
 		FE6FE52D2F0234940090A74C /* Church App Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = FE6FE52C2F0234940090A74C /* Church App Icon.icon */; };
 		FE6FE52F2F0234BC0090A74C /* SafeAreaInsetsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FE52E2F0234B00090A74C /* SafeAreaInsetsKey.swift */; };
+		FE6FE5312F0237F10090A74C /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FE5302F0237EA0090A74C /* OptionalExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		745A98F82C21210700801522 /* AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE6FE52C2F0234940090A74C /* Church App Icon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "Church App Icon.icon"; sourceTree = "<group>"; };
 		FE6FE52E2F0234B00090A74C /* SafeAreaInsetsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsKey.swift; sourceTree = "<group>"; };
+		FE6FE5302F0237EA0090A74C /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		FE6FE52A2F0234230090A74C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FE6FE5302F0237EA0090A74C /* OptionalExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6FE52F2F0234BC0090A74C /* SafeAreaInsetsKey.swift in Sources */,
+				FE6FE5312F0237F10090A74C /* OptionalExtension.swift in Sources */,
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
 				745A98DC2C21210600801522 /* ColumbiaCityChristianChurchApp.swift in Sources */,
 			);
