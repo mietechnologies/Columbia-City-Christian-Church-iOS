@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuModifier<T>: ViewModifier where T: CaseIterable & RawRepresentable & Hashable, T.RawValue == String {
+struct MenuModifier<T>: ViewModifier where T:  RawRepresentable & MenuItemType, T.RawValue == String {
     @Binding var isPresented: Bool
     @Binding var selectedItem: T
     var width: CGFloat = 280
@@ -22,9 +22,7 @@ struct MenuModifier<T>: ViewModifier where T: CaseIterable & RawRepresentable & 
             MenuView<T>(
                 isPresented: $isPresented,
                 selectedItem: $selectedItem,
-                width: width,
-                labelFor: labelFor,
-                iconFor: iconFor
+                width: width
             )
         }
     }
@@ -34,10 +32,8 @@ extension View {
     func menu<T>(
         isPresented: Binding<Bool>,
         selectedItem: Binding<T>,
-        width: CGFloat = 250,
-        labelFor: @escaping (T) -> String = { $0.rawValue },
-        iconFor: @escaping (T) -> Image? = { _ in nil }
-    ) -> some View where T: CaseIterable & RawRepresentable & Hashable, T.RawValue == String {
-        modifier(MenuModifier(isPresented: isPresented, selectedItem: selectedItem, width: width, labelFor: labelFor, iconFor: iconFor))
+        width: CGFloat = 250
+    ) -> some View where T: RawRepresentable & MenuItemType, T.RawValue == String {
+        modifier(MenuModifier(isPresented: isPresented, selectedItem: selectedItem, width: width))
     }
 }

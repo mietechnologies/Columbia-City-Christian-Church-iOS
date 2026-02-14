@@ -18,14 +18,11 @@ private enum MenuViewLayout {
     static let animationDuration: Double = 0.2
 }
 
-struct MenuView<T>: View where T: CaseIterable & RawRepresentable & Hashable, T.RawValue == String {
+struct MenuView<T>: View where T: RawRepresentable & MenuItemType, T.RawValue == String {
     @Binding var isPresented: Bool
     @Binding var selectedItem: T
     var edge: Edge = .leading
     var width: CGFloat = 280
-
-    var labelFor: (T) -> String = { $0.rawValue }
-    var iconFor: (T) -> Image? = { _ in nil }
 
     @Environment(\.safeAreaInsets) private var safeAreaInsets
 
@@ -62,8 +59,9 @@ struct MenuView<T>: View where T: CaseIterable & RawRepresentable & Hashable, T.
 
     private var menuPanel: some View {
         VStack(spacing: 0) {
+            headerSection
+            
             ScrollView {
-                headerSection
                 menuItemsList
             }
 
@@ -103,9 +101,6 @@ struct MenuView<T>: View where T: CaseIterable & RawRepresentable & Hashable, T.
     private var menuItemsList: some View {
         ForEach(menuItems, id: \.self) { item in
             menuItemButton(for: item)
-            Divider()
-                .overlay(Color.white)
-                .padding(.horizontal)
         }
     }
 
@@ -114,19 +109,42 @@ struct MenuView<T>: View where T: CaseIterable & RawRepresentable & Hashable, T.
             selectedItem = item
             withAnimation { isPresented = false }
         } label: {
-            HStack(spacing: MenuViewLayout.iconSpacing) {
-                iconFor(item)
-
-                Text(labelFor(item))
-                    .themeStyle(.mediumHeader, fontColor: .textSecondary)
-                    .fontWeight(.regular)
-                    .foregroundStyle(.primary)
+            VStack {
+                Spacer()
+                
+                HStack(spacing: MenuViewLayout.iconSpacing) {
+                    Image(systemName: item.icon)
+                        .frame(width: 24)
+                        .foregroundStyle(.white)
+                        .padding(.leading, 10)
+                    
+                    Text(item.title)
+                        .themeStyle(.menuItem, fontColor: .textSecondary)
+                        .fontWeight(.regular)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(.white)
+                        .padding(.trailing, 10)
+                }
+                
+                Spacer()
+                
+                if (selectedItem != item) && (menuItems.last != item) {
+                    Divider()
+                        .overlay(Color.white)
+                        .padding(.horizontal)
+                }
             }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.vertical, 2)
-            .contentShape(Rectangle())
+            .background(
+                RoundedRectangle(cornerRadius: 8.0)
+                    .fill(selectedItem == item ? Color.white.opacity(0.1) : Color.clear)
+                    .stroke(selectedItem == item ? Color.white.opacity(0.2) : Color.clear, lineWidth: 0.5)
+            )
+            .padding(.horizontal, 10)
         }
-        .buttonStyle(.plain)
+        .frame(height: 50)
     }
 
     private var signInSection: some View {

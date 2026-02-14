@@ -25,14 +25,10 @@ struct TextModifier: ViewModifier {
     
     private var baseFontSize: CGFloat {
         switch style {
-        case .body:
-            return 20
-        case .body2:
-            return 22
-        case .mediumHeader:
-            return 24
-        case .header:
-            return 30
+        case .body, .menuItem:  return 20
+        case .body2:            return 22
+        case .mediumHeader:     return 24
+        case .header:           return 30
         }
     }
     
@@ -66,6 +62,7 @@ extension TextModifier {
         case body2
         case mediumHeader
         case header
+        case menuItem
         
         /**
          Generates a `Font` given the value of `self`
@@ -78,6 +75,7 @@ extension TextModifier {
             case .body2: return .system(size: size, weight: .regular, design: .default)
             case .mediumHeader: return .system(size: size, weight: .semibold, design: .default)
             case .header: return .system(size: size, weight: .black, design: .default)
+            case .menuItem: return .system(size: size, weight: .heavy, design: .default)
             }
         }
     }

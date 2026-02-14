@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TestView: View {
-    @EnvironmentObject var nav: PageNavigator<TestRoute>
-    
+    @Environment(PageNavigator<TestRoute>.self) private var nav
+
     var body: some View {
-        Button(nav.visibleID!) {
+        Button(nav.visibleID ?? "Unknown") {
             print(nav.stack.count)
             nav.push(.about)
         }

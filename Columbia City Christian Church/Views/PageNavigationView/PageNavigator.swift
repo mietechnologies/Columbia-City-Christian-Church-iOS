@@ -8,7 +8,7 @@
 import SwiftUI
 
 @Observable
-final class PageNavigator<Route: Identifiable & Hashable>: ObservableObject {
+final class PageNavigator<Route: Identifiable & Hashable> {
     var stack: [Route]
     var visibleID: Route.ID?
 
