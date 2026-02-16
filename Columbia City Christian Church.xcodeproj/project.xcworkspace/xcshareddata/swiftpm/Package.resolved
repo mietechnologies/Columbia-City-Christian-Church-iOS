@@ -1,0 +1,24 @@
+{
+  "originHash" : "f8576032520df8acb0c350df025bc1d0a905381f717b36f673f862cf4e92363c",
+  "pins" : [
+    {
+      "identity" : "columbiacitychristianchurchsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:mietechnologies/ColumbiaCityChristianChurchSDK.git",
+      "state" : {
+        "revision" : "d3d8fdc118c1872c92e34bd2452571ff7abb28e8",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "mie_calendarview",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:mietechnologies/MIE_CalendarView.git",
+      "state" : {
+        "revision" : "f95ce0a7ba8a43525840b60889362cb742c62db3",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

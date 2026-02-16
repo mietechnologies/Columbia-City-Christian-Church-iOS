@@ -9,6 +9,7 @@ import Foundation
 
 enum MenuItem: String, MenuItemType {
     case home = "Home"
+    case events = "Events"
     case tithe = "Tithe"
     case directory = "Directory"
     case profile = "Profile"
@@ -21,6 +22,7 @@ enum MenuItem: String, MenuItemType {
     var icon: String {
         switch self {
         case .home:         return "house.fill"
+        case .events:       return "calendar"
         case .tithe:        return "dollarsign"
         case .directory:    return "person.2.fill"
         case .profile:      return "person.fill"
