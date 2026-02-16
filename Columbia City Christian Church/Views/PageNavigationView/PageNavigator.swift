@@ -12,20 +12,24 @@ final class PageNavigator<Route: Identifiable & Hashable> {
     var stack: [Route]
     var visibleID: Route.ID?
 
+    var canGoBack: Bool { stack.count > 1 }
+
     init(root: Route) {
         self.stack = [root]
         self.visibleID = root.id
     }
 
     func push(_ route: Route, animated: Bool = true) {
-        if animated {
-            withAnimation(.snappy) {
-                stack.append(route)
-                visibleID = route.id
+        guard stack.last?.id != route.id else { return }
+        stack.append(route)
+        DispatchQueue.main.async {
+            if animated {
+                withAnimation(.snappy) {
+                    self.visibleID = route.id
+                }
+            } else {
+                self.visibleID = route.id
             }
-        } else {
-            stack.append(route)
-            visibleID = route.id
         }
     }
 

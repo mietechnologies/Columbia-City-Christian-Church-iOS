@@ -10,11 +10,13 @@ import SwiftUI
 struct HeaderView: View {
     
     var title: String
+    let leadingIcon: String
     let menuAction: (() -> Void)?
     let secondaryAction: (() -> Void)?
-    
-    init(_ title: String, menuAction: (() -> Void)? = nil, secondaryAction: (() -> Void)? = nil) {
+
+    init(_ title: String, leadingIcon: String = "line.3.horizontal", menuAction: (() -> Void)? = nil, secondaryAction: (() -> Void)? = nil) {
         self.title = title
+        self.leadingIcon = leadingIcon
         self.menuAction = menuAction
         self.secondaryAction = secondaryAction
     }
@@ -30,12 +32,12 @@ struct HeaderView: View {
                 Button {
                     menuAction?()
                 } label: {
-                    Image(systemName: "line.3.horizontal")
-                        .resizable()
+                    Image(systemName: leadingIcon)
+                        .font(.system(size: 24, weight: .medium))
                 }
-                .frame(width: 30, height: 25)
+                .frame(width: 44, height: 44)
                 .foregroundStyle(Color.textSecondary)
-                .padding(.leading)
+                .padding(.leading, 4)
                 .opacity(menuAction.isNil ? 0 : 1)
                 
                 

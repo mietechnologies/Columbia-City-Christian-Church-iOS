@@ -10,7 +10,7 @@ import SwiftUI
 struct PageNavigationView<Route: Identifiable & Hashable, Page: View>: View {
     @State var nav: PageNavigator<Route>
     private let pageBuilder: (Route) -> Page
-    
+
     private let swipeThreshold: CGFloat = 60     // points
     private let edgeThreshold: CGFloat = 30
 
@@ -19,12 +19,17 @@ struct PageNavigationView<Route: Identifiable & Hashable, Page: View>: View {
         self.pageBuilder = page
     }
 
+    init(nav: PageNavigator<Route>, @ViewBuilder page: @escaping (Route) -> Page) {
+        _nav = .init(initialValue: nav)
+        self.pageBuilder = page
+    }
+
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
 
             ScrollView(.horizontal) {
-                LazyHStack(spacing: 0) {
+                HStack(spacing: 0) {
                     ForEach(nav.stack) { route in
                         pageBuilder(route)
                             .frame(width: size.width, height: size.height)

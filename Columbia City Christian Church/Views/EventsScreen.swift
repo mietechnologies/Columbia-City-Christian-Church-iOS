@@ -25,8 +25,10 @@ enum EventRoute: Hashable, Identifiable {
 // MARK: - Events Screen
 
 struct EventsScreen: View {
+    var nav: PageNavigator<EventRoute>
+
     var body: some View {
-        PageNavigationView(route: EventRoute.list) { route in
+        PageNavigationView(nav: nav) { route in
             switch route {
             case .list:
                 EventListView()
@@ -91,10 +93,12 @@ private struct EventListView: View {
         } else {
             VStack(spacing: 12) {
                 ForEach(eventsForSelectedDay) { event in
-                    eventRow(event)
-                        .onTapGesture {
-                            nav.push(.detail(event))
-                        }
+                    Button {
+                        nav.push(.detail(event))
+                    } label: {
+                        eventRow(event)
+                    }
+                    .buttonStyle(.plain)
                 }
             }
         }
@@ -175,5 +179,5 @@ private struct EventListView: View {
 }
 
 #Preview {
-    EventsScreen()
+    EventsScreen(nav: PageNavigator(root: EventRoute.list))
 }

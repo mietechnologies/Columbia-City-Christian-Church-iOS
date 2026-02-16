@@ -23,17 +23,20 @@ struct ContentView: View {
     
     @State private var showMenu = false
     @State private var selection: MenuItem = .home
-    
+    @State private var eventNav = PageNavigator(root: EventRoute.list)
+
+    // MARK: - Body
+
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                HeaderView(selection.rawValue, menuAction: { withAnimation { showMenu = true } }) // TODO: Replace the title with something more accurate
-                
+                headerView
+
                 switch selection {
                 case .home:
                     AboutChurchScreen()
                 case .events:
-                    EventsScreen()
+                    EventsScreen(nav: eventNav)
                 case .directory:
                     PageNavigationView(route: TestRoute.home, page: navigate(to:))
                 case .tithe:
@@ -45,7 +48,20 @@ struct ContentView: View {
             .menu(isPresented: $showMenu, selectedItem: $selection)
         }
     }
-    
+
+    // MARK: - Subviews
+
+    @ViewBuilder
+    private var headerView: some View {
+        if selection == .events && eventNav.canGoBack {
+            HeaderView(selection.rawValue, leadingIcon: "chevron.left", menuAction: {
+                eventNav.pop()
+            })
+        } else {
+            HeaderView(selection.rawValue, menuAction: { withAnimation { showMenu = true } })
+        }
+    }
+
     @ViewBuilder
     func navigate(to route: TestRoute) -> some View {
         switch route {
