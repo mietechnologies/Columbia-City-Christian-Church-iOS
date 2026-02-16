@@ -32,6 +32,8 @@ struct ContentView: View {
                 switch selection {
                 case .home:
                     AboutChurchScreen()
+                case .events:
+                    EventsScreen()
                 case .directory:
                     PageNavigationView(route: TestRoute.home, page: navigate(to:))
                 case .tithe:
