@@ -23,6 +23,7 @@
 		FE6FE52D2F0234940090A74C /* Church App Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = FE6FE52C2F0234940090A74C /* Church App Icon.icon */; };
 		FE6FE52F2F0234BC0090A74C /* SafeAreaInsetsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FE52E2F0234B00090A74C /* SafeAreaInsetsKey.swift */; };
 		FE6FE5312F0237F10090A74C /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6FE5302F0237EA0090A74C /* OptionalExtension.swift */; };
+		FE709C102F442FF3002E7369 /* MIENavigationView in Frameworks */ = {isa = PBXBuildFile; productRef = FE709C0F2F442FF3002E7369 /* MIENavigationView */; };
 		FE86C90B2F42D13300C0790A /* MIECalendarView in Frameworks */ = {isa = PBXBuildFile; productRef = FE86C90A2F42D13300C0790A /* MIECalendarView */; };
 		FEE9B7422F023C110031168C /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7412F023C0E0031168C /* TextModifier.swift */; };
 		FEE9B7442F023C9B0031168C /* ContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7432F023C970031168C /* ContactInfoView.swift */; };
@@ -32,8 +33,7 @@
 		FEE9B74C2F023DAE0031168C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B74B2F023DAC0031168C /* MenuView.swift */; };
 		FEE9B74E2F023DD10031168C /* MenuViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B74D2F023DCE0031168C /* MenuViewModifier.swift */; };
 		FEE9B7502F023E070031168C /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B74F2F023E040031168C /* MenuItem.swift */; };
-		FEE9B7532F023E3E0031168C /* PageNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7522F023E310031168C /* PageNavigationView.swift */; };
-		FEE9B7552F023E510031168C /* PageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7542F023E4C0031168C /* PageNavigator.swift */; };
+
 		FEE9B7572F023E6B0031168C /* AboutChurchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7562F023E670031168C /* AboutChurchScreen.swift */; };
 		FEE9B7592F023EB00031168C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE9B7582F023EAE0031168C /* TestView.swift */; };
 /* End PBXBuildFile section */
@@ -82,8 +82,7 @@
 		FEE9B74B2F023DAC0031168C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FEE9B74D2F023DCE0031168C /* MenuViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModifier.swift; sourceTree = "<group>"; };
 		FEE9B74F2F023E040031168C /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		FEE9B7522F023E310031168C /* PageNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageNavigationView.swift; sourceTree = "<group>"; };
-		FEE9B7542F023E4C0031168C /* PageNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageNavigator.swift; sourceTree = "<group>"; };
+
 		FEE9B7562F023E670031168C /* AboutChurchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutChurchScreen.swift; sourceTree = "<group>"; };
 		FEE9B7582F023EAE0031168C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +91,7 @@
 		745A98D52C21210600801522 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				FE709C102F442FF3002E7369 /* MIENavigationView in Frameworks */,
 				FE86C90B2F42D13300C0790A /* MIECalendarView in Frameworks */,
 				FE48BD202F414D7F00A74011 /* ColumbiaCityChristianChurchSDK in Frameworks */,
 			);
@@ -188,7 +188,7 @@
 				FEE9B7562F023E670031168C /* AboutChurchScreen.swift */,
 				FE60AA022F5F8A0000B00002 /* EventsScreen.swift */,
 				FE60AA042F5F8A0000B00003 /* EventDetailScreen.swift */,
-				FEE9B7512F023E200031168C /* PageNavigationView */,
+	
 				FE6FE5322F0238620090A74C /* Components */,
 			);
 			path = Views;
@@ -248,15 +248,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		FEE9B7512F023E200031168C /* PageNavigationView */ = {
-			isa = PBXGroup;
-			children = (
-				FEE9B7542F023E4C0031168C /* PageNavigator.swift */,
-				FEE9B7522F023E310031168C /* PageNavigationView.swift */,
-			);
-			path = PageNavigationView;
-			sourceTree = "<group>";
-		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,6 +267,7 @@
 			packageProductDependencies = (
 				FE48BD1F2F414D7F00A74011 /* ColumbiaCityChristianChurchSDK */,
 				FE86C90A2F42D13300C0790A /* MIECalendarView */,
+				FE709C0F2F442FF3002E7369 /* MIENavigationView */,
 			);
 			productName = "Columbia City Christian Church";
 			productReference = 745A98D82C21210600801522 /* Columbia City Christian Church.app */;
@@ -350,6 +343,7 @@
 			packageReferences = (
 				FE48BD1E2F414D7F00A74011 /* XCRemoteSwiftPackageReference "ColumbiaCityChristianChurchSDK" */,
 				FE86C9092F42D13300C0790A /* XCRemoteSwiftPackageReference "MIE_CalendarView" */,
+				FE709C0E2F442FF3002E7369 /* XCRemoteSwiftPackageReference "MIENavigationView" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 745A98D92C21210600801522 /* Products */;
@@ -415,7 +409,7 @@
 				FEE9B7422F023C110031168C /* TextModifier.swift in Sources */,
 				FEE9B74E2F023DD10031168C /* MenuViewModifier.swift in Sources */,
 				FEE9B7592F023EB00031168C /* TestView.swift in Sources */,
-				FEE9B7532F023E3E0031168C /* PageNavigationView.swift in Sources */,
+	
 				FE6FE5312F0237F10090A74C /* OptionalExtension.swift in Sources */,
 				745A98DE2C21210600801522 /* ContentView.swift in Sources */,
 				FEE9B74C2F023DAE0031168C /* MenuView.swift in Sources */,
@@ -424,7 +418,7 @@
 				FEE9B7442F023C9B0031168C /* ContactInfoView.swift in Sources */,
 				FEE9B7502F023E070031168C /* MenuItem.swift in Sources */,
 				FEE9B7462F023CB10031168C /* ContactInfo.swift in Sources */,
-				FEE9B7552F023E510031168C /* PageNavigator.swift in Sources */,
+	
 				FEE9B7572F023E6B0031168C /* AboutChurchScreen.swift in Sources */,
 				FEE9B7482F023CCE0031168C /* HeaderView.swift in Sources */,
 				FE60AA012F5F8A0000B00001 /* EventItem.swift in Sources */,
@@ -777,6 +771,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		FE709C0E2F442FF3002E7369 /* XCRemoteSwiftPackageReference "MIENavigationView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:mietechnologies/MIENavigationView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		FE86C9092F42D13300C0790A /* XCRemoteSwiftPackageReference "MIE_CalendarView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:mietechnologies/MIE_CalendarView.git";
@@ -792,6 +794,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE48BD1E2F414D7F00A74011 /* XCRemoteSwiftPackageReference "ColumbiaCityChristianChurchSDK" */;
 			productName = ColumbiaCityChristianChurchSDK;
+		};
+		FE709C0F2F442FF3002E7369 /* MIENavigationView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE709C0E2F442FF3002E7369 /* XCRemoteSwiftPackageReference "MIENavigationView" */;
+			productName = MIENavigationView;
 		};
 		FE86C90A2F42D13300C0790A /* MIECalendarView */ = {
 			isa = XCSwiftPackageProductDependency;

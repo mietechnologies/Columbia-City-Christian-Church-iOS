@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct TestView: View {
-    @Environment(PageNavigator<TestRoute>.self) private var nav
-
     var body: some View {
-        Button(nav.visibleID ?? "Unknown") {
-            print(nav.stack.count)
-            nav.push(.about)
-        }
+        Text("Coming Soon")
+            .themeStyle(.mediumHeader, fontColor: .textSecondary)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.background)
     }
 }

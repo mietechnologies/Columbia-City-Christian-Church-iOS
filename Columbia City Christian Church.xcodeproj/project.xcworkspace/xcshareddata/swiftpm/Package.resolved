@@ -1,5 +1,5 @@
 {
-  "originHash" : "f8576032520df8acb0c350df025bc1d0a905381f717b36f673f862cf4e92363c",
+  "originHash" : "4a365ff9ff211629b3cfd1b181833ad4eb96baf8d4945c6d87e83d3994bdc5bd",
   "pins" : [
     {
       "identity" : "columbiacitychristianchurchsdk",
@@ -16,6 +16,15 @@
       "location" : "git@github.com:mietechnologies/MIE_CalendarView.git",
       "state" : {
         "revision" : "f95ce0a7ba8a43525840b60889362cb742c62db3",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "mienavigationview",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:mietechnologies/MIENavigationView.git",
+      "state" : {
+        "revision" : "1fbdc8361303aa10e7c704b39612b7b53e025534",
         "version" : "1.0.1"
       }
     }

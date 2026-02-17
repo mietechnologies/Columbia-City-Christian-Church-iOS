@@ -6,6 +6,7 @@
 //
 
 import MIECalendarView
+import MIENavigationView
 import SwiftUI
 
 // MARK: - Event Route
@@ -25,15 +26,19 @@ enum EventRoute: Hashable, Identifiable {
 // MARK: - Events Screen
 
 struct EventsScreen: View {
-    var nav: PageNavigator<EventRoute>
+    let menuAction: () -> Void
 
     var body: some View {
-        PageNavigationView(nav: nav) { route in
+        MIENavigationView(root: EventRoute.list) { route in
             switch route {
             case .list:
-                EventListView()
+                EventListView(menuAction: menuAction)
             case .detail(let event):
                 EventDetailScreen(event: event)
+                    .mieNavigationTitle(
+                        Text(event.title).themeStyle(.header, fontColor: .textSecondary)
+                    )
+                    .mieNavigationBarBackground(Color.main)
             }
         }
     }
@@ -42,7 +47,8 @@ struct EventsScreen: View {
 // MARK: - Event List View
 
 private struct EventListView: View {
-    @Environment(PageNavigator<EventRoute>.self) private var nav
+    let menuAction: () -> Void
+    @Environment(MIENavigator<EventRoute>.self) private var nav
     @State private var selectedDate: DateComponents? = Calendar.current.dateComponents([.year, .month, .day], from: .now)
     @State private var sampleEvents: [EventItem] = EventListView.makeSampleEvents()
 
@@ -75,6 +81,20 @@ private struct EventListView: View {
             }
         }
         .background(Color.background)
+        .mieNavigationTitle(
+            Text("Events").themeStyle(.header, fontColor: .textSecondary)
+        )
+        .mieNavigationLeading {
+            Button {
+                menuAction()
+            } label: {
+                Image(systemName: "line.3.horizontal")
+                    .font(.system(size: 24, weight: .medium))
+                    .foregroundStyle(Color.textSecondary)
+            }
+            .frame(width: 44, height: 44)
+        }
+        .mieNavigationBarBackground(Color.main)
     }
 
     // MARK: - Subviews
@@ -178,6 +198,8 @@ private struct EventListView: View {
     }
 }
 
+// MARK: - Custom Day View Style
+
 #Preview {
-    EventsScreen(nav: PageNavigator(root: EventRoute.list))
+    EventsScreen(menuAction: {})
 }
