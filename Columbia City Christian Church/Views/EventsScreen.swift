@@ -39,8 +39,10 @@ struct EventsScreen: View {
                         Text(event.title).themeStyle(.header, fontColor: .textSecondary)
                     )
                     .mieNavigationBarBackground(Color.main)
+                    .mieNavigationBackButtonColor(Color.textSecondary)
             }
         }
+        .ignoresSafeArea(.container, edges: .bottom)
     }
 }
 
@@ -85,14 +87,7 @@ private struct EventListView: View {
             Text("Events").themeStyle(.header, fontColor: .textSecondary)
         )
         .mieNavigationLeading {
-            Button {
-                menuAction()
-            } label: {
-                Image(systemName: "line.3.horizontal")
-                    .font(.system(size: 24, weight: .medium))
-                    .foregroundStyle(Color.textSecondary)
-            }
-            .frame(width: 44, height: 44)
+            MenuButton(action: menuAction)
         }
         .mieNavigationBarBackground(Color.main)
     }
