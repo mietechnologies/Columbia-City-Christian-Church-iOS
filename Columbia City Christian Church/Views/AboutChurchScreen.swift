@@ -5,11 +5,13 @@
 //  Created by Brett Chapin on 2025.12.28.
 //
 
+import MIENavigationView
 import SwiftUI
 
 struct AboutChurchScreen: View {
+    let menuAction: () -> Void
     let introduction: String = "We welcome you to worship Jesus with us as we gather in the presence of fellow believers. Service starts at 10 am or arrive early to enjoy coffee and donuts with us!"
-    
+
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             Text(introduction)
@@ -53,9 +55,16 @@ struct AboutChurchScreen: View {
         }
         .padding(.horizontal)
         .background(Color.background)
+        .mieNavigationTitle(
+            Text("Home").themeStyle(.header, fontColor: .textSecondary)
+        )
+        .mieNavigationLeading {
+            MenuButton(action: menuAction)
+        }
+        .mieNavigationBarBackground(Color.main)
     }
 }
 
 #Preview {
-    AboutChurchScreen()
+    AboutChurchScreen(menuAction: {})
 }

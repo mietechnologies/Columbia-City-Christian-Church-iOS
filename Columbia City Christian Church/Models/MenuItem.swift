@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum MenuItem: String, MenuItemType {
+enum MenuItem: String, MenuItemType, Identifiable {
+    var id: Self { self }
+
     case home = "Home"
     case events = "Events"
     case tithe = "Tithe"

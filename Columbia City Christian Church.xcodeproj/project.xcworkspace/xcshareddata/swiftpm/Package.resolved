@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:mietechnologies/MIENavigationView.git",
       "state" : {
-        "revision" : "1fbdc8361303aa10e7c704b39612b7b53e025534",
-        "version" : "1.0.1"
+        "revision" : "1fd576c21797964419fa9c1da7a527188be47083",
+        "version" : "1.1.0"
       }
     }
   ],
